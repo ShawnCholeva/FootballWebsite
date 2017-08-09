@@ -1,0 +1,27 @@
+@import url( 'https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+html {  
+    height: 100%;
+}
+
+body {  
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.MuiAppBar-colorPrimary-6 {
+    background-color: transparent !important;
+}
+
+.MuiPaper-shadow4-14 {
+    box-shadow: none !important;
+}

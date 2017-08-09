@@ -1,0 +1,46 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "camelcase": [2],
+    "comma-dangle": [2],
+    "no-undef": [2],
+    "no-unused-vars": [2, {"args": "after-used", "argsIgnorePattern": "^import"}],
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "no-alert": [1],
+    "no-console": [1],
+    "no-debugger": [1],
+    "no-extra-semi": [2],
+    "no-octal": [2],
+    "no-redeclare": [2],
+    "no-self-assign": [2],
+    "no-unreachable": [2],
+    "array-bracket-spacing": [2],
+    "block-spacing": [2],
+    "no-trailing-spaces": [2],
+    "prefer-const": [2],
+    "no-var": [2],
+    "no-useless-rename": [2],
+    "no-useless-constructor": [2],
+    "no-this-before-super": [2],
+    "no-duplicate-imports": ["error", { "includeExports": true }],
+    "arrow-spacing": [2, { "before": true, "after": true }],
+
+    //React
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": [2]
+  }
+}
