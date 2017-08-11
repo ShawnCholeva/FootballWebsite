@@ -1,0 +1,25 @@
+.drawerContainer {
+    -moz-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7);
+    -webkit-box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7);
+    box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.7);
+}
+
+.menuItemContainer {
+
+}
+
+.menuItemContainer:hover {
+    -moz-box-shadow: inset -3px 0px 7px 2px rgba(0,0,0,0.7);
+    -webkit-box-shadow: inset -3px 0px 7px 2px rgba(0,0,0,0.7);
+    box-shadow: inset -3px 0px 7px 2px rgba(0,0,0,0.7);
+}
+
+.menuItemText {
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+    text-decoration: none !important;
+}
+
+.menuItemText a {
+    text-decoration: none !important;
+}

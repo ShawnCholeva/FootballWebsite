@@ -1,0 +1,32 @@
+{
+    "teams": [
+            {
+                "name": "Cowboys",
+                "colors": {
+                    "primary": "#ACB2C3",
+                    "secondary": "#0F152F"
+                }
+            },
+            {
+                "name": "Falcons",
+                "colors": {
+                    "primary": "#282E34",
+                    "secondary": "#C7032E"
+                }
+            },
+            {
+                "name": "Saints",
+                "colors": {
+                    "primary": "#282E34",
+                    "secondary": "#C1A746"
+                }
+            },
+            {
+                "name": "Steelers",
+                "colors": {
+                    "primary": "#282E34",
+                    "secondary": "#FFE23C"
+                }
+            }
+    ]
+}

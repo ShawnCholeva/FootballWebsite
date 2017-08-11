@@ -20,17 +20,17 @@ body, html {
 
 .bgimg-2 {
   background-color: #282E34;
-  min-height: 400px;
+  min-height: 100%;
 }
 
 .bgimg-3 {
   background-color: #282E34;
-  min-height: 400px;
+  min-height: 100%;
 }
 
 .bgimg-4 {
   background-color: #282E34;
-  min-height: 400px;
+  min-height: 100%;
 }
 
 .caption {
@@ -83,8 +83,8 @@ h3 {
     text-align: justify;
 }
 
-.section1 {
-    height:500px;
+.section1, .section2, .section3, .section4 {
+    height:700px;
 }
 
 /* Turn off parallax scrolling for tablets and phones */

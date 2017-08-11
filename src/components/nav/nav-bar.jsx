@@ -9,6 +9,9 @@ import LeftDrawer from './left-drawer.jsx';
 //Actions
 // import { logout } from '../../actions/user/logout';
 
+//Services
+import themeService from '../../services/theme/theme-service';
+
 // Styles
 import './nav-bar.scss';
 import AppBar from 'material-ui/AppBar';
@@ -20,6 +23,8 @@ import FaceIcon from 'material-ui-icons/Face';
 import Menu, { MenuItem } from 'material-ui/Menu';
 
 class NavBar extends React.Component {
+  teamColors = null;
+
   constructor(props){
     super(props);
 
@@ -28,30 +33,21 @@ class NavBar extends React.Component {
       anchorEl: undefined,
       menuOpen: false
     };
+
+    this.themeService = themeService;
+    this.teamColors = this.themeService.getTeamColors();
   }
 
   toggleDrawer(){
     this.setState({
       open: !this.state.open
     });
-  }
 
-  handleDropdownMenu = event => {
-    this.setState({ menuOpen: true, anchorEl: event.currentTarget });
-  };
+    this.teamColors = this.themeService.getTeamColors();
+  }
 
   handleClose() {
     this.setState({open: false});
-  }
-
-  handleDropdownClose() {
-    this.setState({menuOpen: false});
-  }
-
-   logout() {
-    this.setState({menuOpen: false});
-
-    this.props.actions.logout();
   }
 
   render(){
@@ -64,7 +60,7 @@ class NavBar extends React.Component {
           </IconButton>
         </Toolbar>
       </AppBar>
-        <LeftDrawer open={this.state.open} handleClose={this.handleClose.bind(this)} />
+        <LeftDrawer teamColors={this.teamColors} open={this.state.open} handleClose={this.handleClose.bind(this)} />
       </div>
     );
   }

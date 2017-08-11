@@ -5,13 +5,16 @@ import { Link } from 'react-router-dom';
 // Styles
 import './left-drawer.scss';
 import Drawer from 'material-ui/Drawer';
+import Typography from 'material-ui/Typography';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import MailIcon from 'material-ui-icons/Mail';
 
 export default class LeftDrawer extends React.Component {
 constructor(props) {
     super(props);
-    this.state = {open: false};
+    this.state = {
+        open: false
+    };
 }
 
 handleClose() {
@@ -20,28 +23,20 @@ handleClose() {
 
 render() {
     return (
-        <div>
+        <div >
             <Drawer
                 docked={false}
                 width={200}
                 open={this.props.open}
                 onRequestClose={() => this.handleClose()}
             >
-                <List disablePadding>
-                    <Link to="/dashboard" onClick={() => this.handleClose()}>
-                        <ListItem button>
+                <List className="drawerContainer" style={{backgroundColor: this.props.teamColors.primary}} disablePadding>
+                    <Link to="/teams" style={{textDecoration: 'none'}} onClick={() => this.handleClose()}>
+                        <ListItem className="menuItemContainer">
                             <ListItemIcon>
-                                <MailIcon />
+                                <MailIcon style={{color: this.props.teamColors.secondary}}/>
                             </ListItemIcon>
-                            <ListItemText primary="Screen 1" />
-                        </ListItem>
-                    </Link>
-                    <Link to="/ico" onClick={() => this.handleClose()}>
-                        <ListItem button>
-                            <ListItemIcon>
-                                <MailIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Screen 2" />
+                            <ListItemText disableTypography primary={<Typography className="menuItemText" style={{color: this.props.teamColors.secondary}}>Teams</Typography>}/>
                         </ListItem>
                     </Link>
                 </List>
