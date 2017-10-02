@@ -69,8 +69,6 @@ class ThemeService {
 
     replacePrimaryColors(){
         const cols = document.getElementsByClassName('replaceable-primary');
-        console.log(cols);
-        console.log(this.teamInfo.colors.primary);
         for(let i=0; i<cols.length; i++) {
             cols[i].style.backgroundColor = this.teamInfo.colors.primary;
         }

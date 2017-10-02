@@ -1,7 +1,6 @@
 // Dependencies
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 //Comonents
 import LeftDrawer from './left-drawer.jsx';
@@ -17,10 +16,7 @@ import './nav-bar.scss';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import IconButton from 'material-ui/IconButton';
-import Button from 'material-ui/Button';
 import MenuIcon from 'material-ui-icons/Menu';
-import FaceIcon from 'material-ui-icons/Face';
-import Menu, { MenuItem } from 'material-ui/Menu';
 
 class NavBar extends React.Component {
   teamColors = null;
