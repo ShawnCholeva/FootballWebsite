@@ -71,7 +71,7 @@ function mapStateToProps(){
 function matchDispatchToProps(){
     return {
         // actions: bindActionCreators({ logout: logout }, dispatch)
-    }
+    };
 }
 
 export default connect(mapStateToProps, matchDispatchToProps)(NavBar);
