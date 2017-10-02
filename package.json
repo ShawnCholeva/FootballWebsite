@@ -6,7 +6,7 @@
     "build": "webpack",
     "build-prod": "webpack -p",
     "start": "webpack-dev-server --hot --inline --port 9999 --history-api-fallback",
-    "lint": "eslint --ext js --ext jsx src || exit 0"
+    "lint": "eslint --ext js --ext jsx src"
   },
   "keywords": [
     "nfl"
