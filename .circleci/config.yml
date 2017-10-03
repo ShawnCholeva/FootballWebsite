@@ -12,3 +12,10 @@ jobs:
        - run: npm install
        - run: npm run lint
        - run: npm run test
+       - deploy:
+          name: Maybe Deploy
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              $DOCKER_HUB_TRIGGER
+            fi
+   deploy:
