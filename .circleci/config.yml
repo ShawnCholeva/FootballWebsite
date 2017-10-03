@@ -18,4 +18,3 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               $DOCKER_HUB_TRIGGER
             fi
-   deploy:
