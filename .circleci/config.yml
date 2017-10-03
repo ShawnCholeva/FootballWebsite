@@ -1,6 +1,9 @@
 version: 2
 jobs:
    build:
+     filters:
+       branches:
+         only: develop
      docker:
        - image: circleci/node:latest
      steps:
@@ -8,6 +11,3 @@ jobs:
        - run: npm install
        - run: npm run lint
        - run: npm run test
-     branches:
-       - only:
-         - dev
