@@ -13,8 +13,10 @@ jobs:
        - run: npm run lint
        - run: npm run test
        - deploy:
-          name: Maybe Deploy
+          name: Deploy Master
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               $DOCKER_HUB_TRIGGER
+            else
+              echo "Not master branch, so not deploying"
             fi
