@@ -15,7 +15,7 @@ import { default as http } from 'request-promise';
                 'Content-Type': 'application/json'
             },
             json: true
-        };
+        }
         return http(options);
     }
 
